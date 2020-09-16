@@ -92,8 +92,8 @@
                 <li class="offset-md-9">
                     <select class="form-control form-control-sm">
                         <option>Order By</option>
-                        <option>Decrease</option>
-                        <option>Increase</option>
+                        <option class="decrease"> Decrease</option>
+                        <option class="increase"> Increase</option>
                     </select>
                 </li>
             </ol>
@@ -319,6 +319,11 @@
                     }
                 });
             }
+            $('Decrease').onclick(function(){
+                $('product').show.filter(function(){
+                    return $this.sort();
+                })
+            })
         });
     </script>
 </body>
